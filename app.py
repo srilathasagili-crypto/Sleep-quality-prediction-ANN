@@ -146,11 +146,6 @@ if st.button("Predict Sleep Quality"):
         diastolic_bp
     ]
 
-    st.write("Feature Columns:", feature_columns)
-    st.write("Number of Feature Columns:", len(feature_columns))
-    st.write("Input Values:", values)
-    st.write("Number of Input Values:", len(values))
-
     input_data = pd.DataFrame([values], columns=feature_columns)
 
     input_scaled = scaler.transform(input_data)
