@@ -132,26 +132,26 @@ if st.button("Predict Sleep Quality"):
     sleep_disorder = sleep_disorder_encoder.transform([sleep_disorder])[0]
 
     values = [
-    gender,
-    age,
-    occupation,
-    sleep_duration,
-    physical_activity,
-    stress_level,
-    bmi,
-    heart_rate,
-    daily_steps,
-    sleep_disorder,
-    systolic_bp,
-    diastolic_bp
-]
+        gender,
+        age,
+        occupation,
+        sleep_duration,
+        physical_activity,
+        stress_level,
+        bmi,
+        heart_rate,
+        daily_steps,
+        sleep_disorder,
+        systolic_bp,
+        diastolic_bp
+    ]
 
-st.write("Feature Columns:", feature_columns)
-st.write("Number of Feature Columns:", len(feature_columns))
-st.write("Input Values:", values)
-st.write("Number of Input Values:", len(values))
+    st.write("Feature Columns:", feature_columns)
+    st.write("Number of Feature Columns:", len(feature_columns))
+    st.write("Input Values:", values)
+    st.write("Number of Input Values:", len(values))
 
-input_data = pd.DataFrame([values], columns=feature_columns)
+    input_data = pd.DataFrame([values], columns=feature_columns)
 
     input_scaled = scaler.transform(input_data)
 
